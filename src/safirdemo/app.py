@@ -12,7 +12,7 @@ from safir.logging import configure_logging
 from safir.middleware import bind_logger
 
 from safirdemo.config import Configuration
-from safirdemo.handlers import init_internal_routes, init_external_routes
+from safirdemo.handlers import init_external_routes, init_internal_routes
 
 if sys.version_info < (3, 8):
     from importlib_metadata import metadata, PackageNotFoundError
@@ -27,7 +27,7 @@ def create_app() -> web.Application:
     configure_logging(
         profile=config.profile,
         log_level=config.log_level,
-        name=config.logger_name
+        name=config.logger_name,
     )
 
     root_app = web.Application()
@@ -40,10 +40,7 @@ def create_app() -> web.Application:
     sub_app = web.Application()
     setup_middleware(sub_app)
     sub_app.add_routes(init_external_routes())
-    root_app.add_subapp(
-        f'/{root_app["safir/config"].name}',
-        sub_app
-    )
+    root_app.add_subapp(f'/{root_app["safir/config"].name}', sub_app)
 
     return root_app
 

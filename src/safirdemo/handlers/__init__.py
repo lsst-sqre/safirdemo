@@ -5,7 +5,6 @@ __all__ = ["internal_routes", "routes", "init_internal_routes", "init_routes"]
 
 from aiohttp import web
 
-
 internal_routes = web.RouteTableDef()
 """Routes for the root application that serves from '/'
 
@@ -27,6 +26,7 @@ def init_external_routes() -> web.RouteTableDef:
     # Import handlers so that they are registered with the routes table via
     # decorators.
     import safirdemo.handlers.external  # noqa: F401
+
     return routes
 
 
@@ -37,4 +37,5 @@ def init_internal_routes() -> web.RouteTableDef:
     # Import handlers so that they are registered with the routes table via
     # decorators.
     import safirdemo.handlers.internal  # noqa: F401
+
     return internal_routes

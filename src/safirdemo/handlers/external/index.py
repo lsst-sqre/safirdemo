@@ -18,7 +18,5 @@ async def get_index(request) -> web.Response:
     root of your API. For example, consider listing key API URLs.
     """
     metadata = request.config_dict["safir/metadata"]
-    data = {
-        "_metadata": metadata
-    }
+    data = {"_metadata": metadata}
     return web.json_response(data)

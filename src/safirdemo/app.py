@@ -6,6 +6,7 @@ __all__ = ["create_app"]
 import sys
 from typing import Any, Dict
 
+import structlog
 from aiohttp import web
 from safir.http import init_http_session
 from safir.logging import configure_logging
@@ -41,6 +42,9 @@ def create_app() -> web.Application:
     setup_middleware(sub_app)
     sub_app.add_routes(init_external_routes())
     root_app.add_subapp(f'/{root_app["safir/config"].name}', sub_app)
+
+    logger = structlog.get_logger(config.logger_name)
+    logger.info(f"Started up {config.name}")
 
     return root_app
 

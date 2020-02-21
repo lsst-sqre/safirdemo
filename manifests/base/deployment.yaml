@@ -1,0 +1,27 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: safirdemo
+  labels:
+    app: safirdemo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: safirdemo
+  template:
+    metadata:
+      labels:
+        name: safirdemo
+    spec:
+      containers:
+        - name: app
+          imagePullPolicy: "Always"
+          image: "lsstsqre/safirdemo:latest"
+          ports:
+            - containerPort: 8080
+              name: app
+          envFrom:
+            - configMapRef:
+                name: safirdemo

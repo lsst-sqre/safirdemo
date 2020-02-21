@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: safirdemo
+  labels:
+    app: safirdemo
+spec:
+  ports:
+    - name: safirdemo-http
+      protocol: TCP
+      port: 8080
+      targetPort: app
+  selector:
+    name: safirdemo

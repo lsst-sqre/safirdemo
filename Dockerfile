@@ -27,7 +27,7 @@ RUN python -m venv $VIRTUAL_ENV
 # Make sure we use the virtualenv
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 # Put the latest pip and setuptools in the virtualenv
-RUN pip install --upgrade --no-cache-dir pip setuptools
+RUN pip install --upgrade --no-cache-dir pip setuptools wheel
 
 # Install the app's Python runtime dependencies
 COPY requirements/main.txt ./requirements.txt

@@ -15,4 +15,6 @@ async def get_index(request) -> web.Response:
     By convention, this endpoint returns only the application's metadata.
     """
     metadata = request.config_dict["safir/metadata"]
+    logger = request["logger"]
+    logger.info("Got request on internal index route")
     return web.json_response(metadata)

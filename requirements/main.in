@@ -8,6 +8,8 @@
 --index-url https://pypi.python.org/simple/
 
 git+git://github.com/lsst-sqre/safir@tickets/DM-23355#egg=safir
-aiohttp[speedups]
+aiohttp
+aiodns
+cchardet
 importlib_metadata
 click

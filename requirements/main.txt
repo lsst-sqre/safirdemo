@@ -6,18 +6,17 @@
 #
 --index-url https://pypi.python.org/simple/
 
-aiodns==2.0.0             # via aiohttp
-aiohttp[speedups]==3.6.2  # via -r requirements/main.in (line 11), safir
+aiodns==2.0.0             # via -r requirements/main.in (line 12)
+aiohttp==3.6.2            # via -r requirements/main.in (line 11), safir
 async-timeout==3.0.1      # via aiohttp
 attrs==19.3.0             # via aiohttp
-brotlipy==0.7.0           # via aiohttp
-cchardet==2.1.5           # via aiohttp
-cffi==1.14.0              # via brotlipy, pycares
+cchardet==2.1.5           # via -r requirements/main.in (line 13)
+cffi==1.14.0              # via pycares
 chardet==3.0.4            # via aiohttp
-click==7.0                # via -r requirements/main.in (line 13)
+click==7.0                # via -r requirements/main.in (line 15)
 idna==2.9                 # via yarl
-importlib-metadata==1.5.0  # via -r requirements/main.in (line 12), safir
-multidict==4.7.4          # via aiohttp, yarl
+importlib-metadata==1.5.0  # via -r requirements/main.in (line 14), safir
+multidict==4.7.5          # via aiohttp, yarl
 pycares==3.1.1            # via aiodns
 pycparser==2.19           # via cffi
 git+git://github.com/lsst-sqre/safir@tickets/DM-23355#egg=safir  # via -r requirements/main.in (line 10)

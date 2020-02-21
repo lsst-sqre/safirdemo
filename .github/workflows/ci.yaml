@@ -37,3 +37,20 @@ jobs:
 
       - name: Log into Docker Hub
         run: echo ${{ secrets.DOCKER_PASSWORD }} | docker login --username ${{ secrets.DOCKER_USERNAME }} --password-stdin
+
+      - name: Pull previous images
+        run: |
+          docker pull lsstsqre/safirdemo:deps-${{steps.vars.outputs.tag}} || true
+          docker pull lsstsqre/safirdemo:${{steps.vars.outputs.tag}} || true
+
+      - name: Build the dependencies Docker image
+        run: |
+          docker build --target dependencies-image \
+            --cache-from=lsstsqre/safirdemo:deps-${{steps.vars.outputs.tag}} \
+            --tag lsstsqre/safirdemo:deps-${{steps.vars.outputs.tag}} .
+
+      - name: Build the runtime Docker image
+        run: |
+          docker build --target runtime-image \
+            --cache-from=lsstsqre/safirdemo:${{steps.vars.outputs.tag}} \
+            --tag lsstsqre/safirdemo:${{steps.vars.outputs.tag}} .

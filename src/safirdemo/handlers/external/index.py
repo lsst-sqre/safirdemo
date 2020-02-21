@@ -19,4 +19,6 @@ async def get_index(request) -> web.Response:
     """
     metadata = request.config_dict["safir/metadata"]
     data = {"_metadata": metadata}
+    logger = request["logger"]
+    logger.info("Got request on index route")
     return web.json_response(data)

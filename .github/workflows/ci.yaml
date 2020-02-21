@@ -54,3 +54,8 @@ jobs:
           docker build --target runtime-image \
             --cache-from=lsstsqre/safirdemo:${{steps.vars.outputs.tag}} \
             --tag lsstsqre/safirdemo:${{steps.vars.outputs.tag}} .
+
+      - name: Push Docker images
+        run: |
+          docker push lsstsqre/safirdemo:deps-${{steps.vars.outputs.tag}}
+          docker push lsstsqre/safirdemo:${{steps.vars.outputs.tag}}

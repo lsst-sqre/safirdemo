@@ -1,5 +1,8 @@
-# This Dockerfile has three stages:
+# This Dockerfile has four stages:
 #
+# base-image
+#   Updates the base Python image with security patches and common system
+#   packages. This image becomes the base of all other images.
 # dependencies-image
 #   Installs third-party dependencies (requirements/main.txt) into a virtual
 #   environment. This virtual environment is ideal for copying across build
@@ -14,12 +17,13 @@
 #   - Runs a non-root user.
 #   - Sets up the entrypoint and port.
 
-FROM python:3.7-slim-buster AS dependencies-image
+FROM python:3.7-slim-buster AS base-image
 
-# Update system packages to get security updates
-RUN apt-get -y update && apt-get -y upgrade
-# Install git; needed to install Safir from GitHub
-RUN apt-get -y install --no-install-recommends git
+# Update system packages
+COPY scripts/install-base-packages.sh .
+RUN ./install-base-packages.sh
+
+FROM base-image AS dependencies-image
 
 # Create a Python virtual environment
 ENV VIRTUAL_ENV=/opt/venv
@@ -33,12 +37,7 @@ RUN pip install --upgrade --no-cache-dir pip setuptools wheel
 COPY requirements/main.txt ./requirements.txt
 RUN pip install --quiet --no-cache-dir -r requirements.txt
 
-FROM python:3.7-slim-buster AS install-image
-
-# Update system packages to get security updates
-RUN apt-get -y update && apt-get -y upgrade
-# Install git (needed for setuptools_scm)
-RUN apt-get -y install --no-install-recommends git
+FROM base-image AS install-image
 
 # Use the virtualenv
 COPY --from=dependencies-image /opt/venv /opt/venv
@@ -48,7 +47,7 @@ COPY . /app
 WORKDIR /app
 RUN pip install --no-cache-dir .
 
-FROM python:3.7-slim-buster AS runtime-image
+FROM base-image AS runtime-image
 
 # Create a non-root user
 RUN useradd --create-home appuser
@@ -57,9 +56,9 @@ WORKDIR /home/appuser
 # Make sure we use the virtualenv
 ENV PATH="/opt/venv/bin:$PATH"
 
-# Update system packages
-COPY scripts/install-runtime-packages.sh .
-RUN ./install-runtime-packages.sh
+# Update system packages (not currently needed)
+# COPY scripts/install-runtime-packages.sh .
+# RUN ./install-runtime-packages.sh
 
 COPY --from=install-image /opt/venv /opt/venv
 

@@ -35,7 +35,7 @@ commands =
 [testenv:typing]
 description = Run mypy.
 commands =
-    mypy src/safirdemo
+    mypy src/safirdemo tests setup.py
 
 [testenv:lint]
 description = Lint codebase by running pre-commit (Black, isort, Flake8).
@@ -60,6 +60,17 @@ source = ["src", ".tox/*/site-packages"]
 
 [tool.coverage.report]
 show_missing = true
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug:",
+    "if settings.DEBUG",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if 0:",
+    "if __name__ == .__main__.:",
+    "if TYPE_CHECKING:"
+]
 
 [tool.black]
 line-length = 79

@@ -3,6 +3,8 @@
 
 __all__ = ("main", "help", "run")
 
+from typing import Any, Union
+
 import click
 from aiohttp.web import run_app
 
@@ -28,13 +30,13 @@ def main(ctx: click.Context) -> None:
 @main.command()
 @click.argument("topic", default=None, required=False, nargs=1)
 @click.pass_context
-def help(ctx: click.Context, topic: str, **kw) -> None:
+def help(ctx: click.Context, topic: Union[None, str], **kw: Any) -> None:
     """Show help for any command.
     """
     # The help command implementation is taken from
     # https://www.burgundywall.com/post/having-click-help-subcommand
     if topic is None:
-        click.echo(ctx.parent.get_help())
+        click.echo(ctx.parent.get_help())  # type: ignore
     else:
         click.echo(main.commands[topic].get_help(ctx))
 

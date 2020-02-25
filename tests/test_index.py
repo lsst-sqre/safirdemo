@@ -1,10 +1,17 @@
 """Tests for the safirdemo.handlers.external.index module and routes.
 """
 
+from __future__ import annotations
+
+from typing import TYPE_CHECKING
+
 from safirdemo.app import create_app
 
+if TYPE_CHECKING:
+    from aiohttp.pytest_plugin.test_utils import TestClient
 
-async def test_get_index(aiohttp_client):
+
+async def test_get_index(aiohttp_client: TestClient) -> None:
     """Test GET /app-name/
     """
     app = create_app()

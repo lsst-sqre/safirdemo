@@ -3,13 +3,14 @@
 
 __all__ = ["get_index"]
 
+import structlog
 from aiohttp import web
 
 from safirdemo.handlers import routes
 
 
 @routes.get("/")
-async def get_index(request) -> web.Response:
+async def get_index(request: web.Request) -> web.Response:
     """GET /<path>/ (the app's external root).
 
     By convention, the root of the external API includes a field called
@@ -19,4 +20,10 @@ async def get_index(request) -> web.Response:
     """
     metadata = request.config_dict["safir/metadata"]
     data = {"_metadata": metadata}
+    logger = request["safir/logger"]
+    logger.info("Got request on index route")
+
+    other_logger = structlog.get_logger(__name__)
+    other_logger.info("Hello from other logger")
+
     return web.json_response(data)

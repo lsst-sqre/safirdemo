@@ -20,7 +20,7 @@ async def get_index(request: web.Request) -> web.Response:
     """
     metadata = request.config_dict["safir/metadata"]
     data = {"_metadata": metadata}
-    logger = request["logger"]
+    logger = request["safir/logger"]
     logger.info("Got request on index route")
 
     other_logger = structlog.get_logger(__name__)

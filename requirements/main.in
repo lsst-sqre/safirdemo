@@ -7,7 +7,7 @@
 
 --index-url https://pypi.python.org/simple/
 
-git+git://github.com/lsst-sqre/safir@tickets/DM-23355#egg=safir
+safir
 aiohttp
 aiodns
 cchardet

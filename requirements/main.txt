@@ -175,6 +175,11 @@ structlog==20.1.0 \
     --hash=sha256:7a48375db6274ed1d0ae6123c486472aa1d0890b08d314d2b016f3aa7f35990b \
     --hash=sha256:8a672be150547a93d90a7d74229a29e765be05bd156a35cdcc527ebf68e9af92 \
     # via safir
+typing-extensions==3.7.4.2 \
+    --hash=sha256:6e95524d8a547a91e08f404ae485bbb71962de46967e1b71a0cb89af24e761c5 \
+    --hash=sha256:79ee589a3caca649a9bfd2a8de4709837400dfa00b6cc81962a1e6a1815969ae \
+    --hash=sha256:f8d2bd89d25bc39dabe7d23df520442fa1d8969b82544370e03d88b5a591c392 \
+    # via -r requirements/main.in
 yarl==1.5.1 \
     --hash=sha256:040b237f58ff7d800e6e0fd89c8439b841f777dd99b4a9cca04d6935564b9409 \
     --hash=sha256:17668ec6722b1b7a3a05cc0167659f6c95b436d25a36c2d52db0eca7d3f72593 \

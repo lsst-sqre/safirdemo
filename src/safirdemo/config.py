@@ -9,8 +9,7 @@ from dataclasses import dataclass
 
 @dataclass
 class Configuration:
-    """Configuration for safirdemo.
-    """
+    """Configuration for safirdemo."""
 
     name: str = os.getenv("SAFIR_NAME", "safirdemo")
     """The application's name, which doubles as the root HTTP endpoint path.

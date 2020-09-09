@@ -12,8 +12,7 @@ if TYPE_CHECKING:
 
 
 async def test_get_index(aiohttp_client: TestClient) -> None:
-    """Test GET /app-name/
-    """
+    """Test GET /app-name/"""
     app = create_app()
     name = app["safir/config"].name
     client = await aiohttp_client(app)

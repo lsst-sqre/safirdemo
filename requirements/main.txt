@@ -10,22 +10,22 @@ aiodns==2.0.0 \
     --hash=sha256:815fdef4607474295d68da46978a54481dd1e7be153c7d60f9e72773cd38d77d \
     --hash=sha256:aaa5ac584f40fe778013df0aa6544bf157799bd3f608364b451840ed2c8688de \
     # via -r requirements/main.in
-aiohttp==3.7.1 \
-    --hash=sha256:04f9d70f6c4d089be5068d7df6281e638f6820d4f1b1ec3dc012b0b43fa997d2 \
-    --hash=sha256:4d14d823e8c017be21e740d169bd9142fdfc8cc124954787e1e6336dbe1b8612 \
+aiohttp==3.7.2 \
+    --hash=sha256:184ead67248274f0e20b0cd6bb5f25209b2fad56e5373101cc0137c32c825c87 \
+    --hash=sha256:c6da1af59841e6d43255d386a2c4bfb59c0a3b262bdb24325cc969d211be6070 \
     # via -r requirements/main.in, safir
 async-timeout==3.0.1 \
     --hash=sha256:0c3c816a028d47f659d6ff5c745cb2acf1f966da1fe5c19c77a70282b25f4c5f \
     --hash=sha256:4291ca197d287d274d0b6cb5d6f8f8f82d434ed288f962539ff18cc9012f9ea3 \
     # via aiohttp
-attrs==20.2.0 \
-    --hash=sha256:26b54ddbbb9ee1d34d5d3668dd37d6cf74990ab23c828c2888dccdceee395594 \
-    --hash=sha256:fce7fc47dfc976152e82d53ff92fa0407700c21acd20886a13777a0d20e655dc \
+attrs==20.3.0 \
+    --hash=sha256:31b2eced602aa8423c2aea9c76a724617ed67cf9513173fd3a4f03e3a929c7e6 \
+    --hash=sha256:832aa3cde19744e49938b91fea06d69ecb9e649c93ba974535d08ad92164f700 \
     # via aiohttp
-cchardet==2.1.6 \
-    --hash=sha256:8f7ade2578b2326a0a554c03f60c8d079331220179a592e83e143c9556b7f5b2 \
-    --hash=sha256:af284494ea6c40f9613b4d939abe585eb9290cb92037eab66122c93190fcb338 \
-    --hash=sha256:b76afb2059ad69eab576949980a17413c1e9e5a5624abf9e43542d8853f146b3 \
+cchardet==2.1.7 \
+    --hash=sha256:90086e5645f8a1801350f4cc6cb5d5bf12d3fa943811bb08667744ec1ecc9ccd \
+    --hash=sha256:c428b6336545053c2589f6caf24ea32276c6664cb86db817e03a94c60afa0eaf \
+    --hash=sha256:f16517f3697569822c6d09671217fdeab61dfebc7acb5068634d6b0728b86c0b \
     # via -r requirements/main.in
 cffi==1.14.3 \
     --hash=sha256:529c4ed2e10437c205f38f3691a68be66c39197d01062618c55f74294a4a4828 \

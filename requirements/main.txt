@@ -27,9 +27,9 @@ cchardet==2.1.7 \
     --hash=sha256:c428b6336545053c2589f6caf24ea32276c6664cb86db817e03a94c60afa0eaf \
     --hash=sha256:f16517f3697569822c6d09671217fdeab61dfebc7acb5068634d6b0728b86c0b \
     # via -r requirements/main.in
-cffi==1.14.3 \
-    --hash=sha256:529c4ed2e10437c205f38f3691a68be66c39197d01062618c55f74294a4a4828 \
-    --hash=sha256:f92f789e4f9241cd262ad7a555ca2c648a98178a953af117ef7fad46aa1d5591 \
+cffi==1.14.4 \
+    --hash=sha256:1a465cbe98a7fd391d47dce4b8f7e5b921e6cd805ef421d04f5f66ba8f06086c \
+    --hash=sha256:8d6603078baf4e11edc4168a514c5ce5b3ba6e3e9c374298cb88437957960a53 \
     # via pycares
 chardet==3.0.4 \
     --hash=sha256:84ab92ed1c4d4f16916e05906b6b75a6c0fb5db821cc65e70cbd64a3e2a5eaae \
@@ -43,9 +43,9 @@ idna==2.10 \
     --hash=sha256:b307872f855b18632ce0c21c5e45be78c0ea7ae4c15c828c20788b26921eb3f6 \
     --hash=sha256:b97d804b1e9b523befed77c48dacec60e6dcb0b5391d57af6a65a312a90648c0 \
     # via yarl
-importlib-metadata==3.0.0 \
-    --hash=sha256:d582eb5c35b2f16c78e365e0f89e369f36af38fdaad0146208aa973c693ba247 \
-    --hash=sha256:fc3b3f9697703d3833d2803162d60cbe8b9f57b5da5e6496ac81e3cb82bd8d9c \
+importlib-metadata==3.1.0 \
+    --hash=sha256:590690d61efdd716ff82c39ca9a9d4209252adfe288a4b5721181050acbd4175 \
+    --hash=sha256:d9b8a46a0885337627a6430db287176970fff18ad421becec1d64cfc763c2099 \
     # via -r requirements/main.in
 multidict==5.0.2 \
     --hash=sha256:06f39f0ddc308dab4e5fa282d145f90cd38d7ed75390fc83335636909a9ec191 \

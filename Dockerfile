@@ -10,9 +10,6 @@
 # install-image
 #   Installs the app into the virtual environment.
 # runtime-image
-#   - Updates system packages using the scripts/install-runtime-packages.sh
-#     script (this technique prevents the apt-get cache from being added to the
-#     Docker layers).
 #   - Copies the virtual environment into place.
 #   - Runs a non-root user.
 #   - Sets up the entrypoint and port.
@@ -21,9 +18,13 @@ FROM python:3.9.0-slim-buster AS base-image
 
 # Update system packages
 COPY scripts/install-base-packages.sh .
-RUN ./install-base-packages.sh
+RUN ./install-base-packages.sh && rm ./install-base-packages.sh
 
 FROM base-image AS dependencies-image
+
+# Install system packages only needed for building dependencies.
+COPY scripts/install-dependency-packages.sh .
+RUN ./install-dependency-packages.sh
 
 # Create a Python virtual environment
 ENV VIRTUAL_ENV=/opt/venv

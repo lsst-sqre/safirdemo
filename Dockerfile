@@ -57,10 +57,6 @@ WORKDIR /home/appuser
 # Make sure we use the virtualenv
 ENV PATH="/opt/venv/bin:$PATH"
 
-# Update system packages (not currently needed)
-# COPY scripts/install-runtime-packages.sh .
-# RUN ./install-runtime-packages.sh
-
 COPY --from=install-image /opt/venv /opt/venv
 
 # Switch to non-root user

@@ -63,9 +63,9 @@ flake8==3.8.4 \
     --hash=sha256:749dbbd6bfd0cf1318af27bf97a14e28e5ff548ef8e5b1566ccfb25a11e7c839 \
     --hash=sha256:aadae8761ec651813c24be05c6f7b4680857ef6afaae4651a4eccaef97ce6c3b
     # via -r requirements/dev.in
-identify==1.5.12 \
-    --hash=sha256:18994e850ba50c37bcaed4832be8b354d6a06c8fb31f54e0e7ece76d32f69bc8 \
-    --hash=sha256:892473bf12e655884132a3a32aca737a3cbefaa34a850ff52d501773a45837bc
+identify==1.5.13 \
+    --hash=sha256:70b638cf4743f33042bebb3b51e25261a0a10e80f978739f17e7fd4837664a66 \
+    --hash=sha256:9dfb63a2e871b807e3ba62f029813552a24b5289504f5b071dea9b041aee9fe4
     # via pre-commit
 idna==3.1 \
     --hash=sha256:5205d03e7bcbb919cc9c19885f9920d622ca52448306f2377daede5cf3faac16 \
@@ -89,10 +89,11 @@ mypy-extensions==0.4.3 \
     --hash=sha256:090fedd75945a69ae91ce1303b5824f428daf5a028d2f6ab8a299250a846f15d \
     --hash=sha256:2d82818f5bb3e369420cb3c4060a7970edba416647068eb4c5343488a6c604a8
     # via mypy
-mypy==0.790 \
-    --hash=sha256:2842d4fbd1b12ab422346376aad03ff5d0805b706102e475e962370f874a5122 \
-    --hash=sha256:2b21ba45ad9ef2e2eb88ce4aeadd0112d0f5026418324176fd494a6824b74975 \
-    --hash=sha256:af4e9ff1834e565f1baa74ccf7ae2564ae38c8df2a85b057af1dbbc958eb6666
+mypy==0.800 \
+    --hash=sha256:3e0c159a7853e3521e3f582adb1f3eac66d0b0639d434278e2867af3a8c62653 \
+    --hash=sha256:74f5aa50d0866bc6fb8e213441c41e466c86678c800700b87b012ed11c0a13e0 \
+    --hash=sha256:a301da58d566aca05f8f449403c710c50a9860782148332322decf73a603280b \
+    --hash=sha256:e0202e37756ed09daf4b0ba64ad2c245d357659e014c3f51d8cd0681ba66940a
     # via -r requirements/dev.in
 nodeenv==1.5.0 \
     --hash=sha256:5304d424c529c997bc888453aeaa6362d242b6b4631e90f3d4bf1b290f1c84a9 \
@@ -122,9 +123,9 @@ pyflakes==2.2.0 \
     --hash=sha256:0d94e0e05a19e57a99444b6ddcf9a6eb2e5c68d3ca1e98e90707af8152c90a92 \
     --hash=sha256:35b2d75ee967ea93b55750aa9edbbf72813e06a66ba54438df2cfac9e3c27fc8
     # via flake8
-pygments==2.7.3 \
-    --hash=sha256:ccf3acacf3782cbed4a989426012f1c535c9a90d3a7fc3f16d231b9372d2b716 \
-    --hash=sha256:f275b6c0909e5dafd2d6269a656aa90fa58ebf4a74f8fcf9053195d226b24a08
+pygments==2.7.4 \
+    --hash=sha256:bc9591213a8f0e0ca1a5e68a479b4887fdc3e75d0774e5c71c31920c427de435 \
+    --hash=sha256:df49d09b498e83c1a73128295860250b0b7edd4c723a32e9bc0d295c7c2ec337
     # via aiohttp-devtools
 pyparsing==2.4.7 \
     --hash=sha256:c203ec8783bf771a155b207279b9bccb8dea02d8f0c9e5f8ead507bc3246ecc1 \
@@ -140,8 +141,9 @@ pytest==6.2.1 \
     # via
     #   -r requirements/dev.in
     #   pytest-aiohttp
-pyyaml==5.3.1 \
-    --hash=sha256:b8eac752c5e14d3eca0e6dd9199cd627518cb5ec06add0de9d32baeee6fe645d
+pyyaml==5.4.1 \
+    --hash=sha256:607774cbba28732bfa802b54baa7484215f530991055bb562efbed5b2f20a45e \
+    --hash=sha256:8c1be557ee92a20f184922c7b6424e8ab6691788e6d86137c5d93c1a6ec1b8fb
     # via pre-commit
 six==1.15.0 \
     --hash=sha256:30639c035cdb23534cd4aa2dd52c3bf48f06e5f4a941509c8bafd8ce11080259 \
@@ -164,9 +166,9 @@ typing-extensions==3.7.4.3 \
     # via
     #   aiohttp
     #   mypy
-virtualenv==20.3.0 \
-    --hash=sha256:205a7577275dd0d9223c730dd498e21a8910600085c3dee97412b041fc4b853b \
-    --hash=sha256:7992b8de87e544a4ab55afc2240bf8388c4e3b5765d03784dad384bfdf9097ee
+virtualenv==20.4.0 \
+    --hash=sha256:219ee956e38b08e32d5639289aaa5bd190cfbe7dafcb8fa65407fca08e808f9c \
+    --hash=sha256:227a8fed626f2f20a6cdb0870054989f82dd27b2560a911935ba905a2a5e0034
     # via pre-commit
 watchgod==0.6 \
     --hash=sha256:59700dab7445aa8e6067a5b94f37bae90fc367554549b1ed2e9d0f4f38a90d2a \

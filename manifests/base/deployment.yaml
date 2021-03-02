@@ -15,13 +15,24 @@ spec:
       labels:
         name: safirdemo
     spec:
+      automountServiceAccountToken: false
       containers:
         - name: app
           imagePullPolicy: "Always"
-          image: "lsstsqre/safirdemo:latest"
+          image: "lsstsqre/safirdemo"
           ports:
             - containerPort: 8080
               name: app
           envFrom:
             - configMapRef:
                 name: safirdemo
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+                - all
+            readOnlyRootFilesystem: true
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 1000
+        runAsGroup: 1000

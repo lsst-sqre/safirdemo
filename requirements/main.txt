@@ -10,9 +10,9 @@ aiodns==2.0.0 \
     --hash=sha256:815fdef4607474295d68da46978a54481dd1e7be153c7d60f9e72773cd38d77d \
     --hash=sha256:aaa5ac584f40fe778013df0aa6544bf157799bd3f608364b451840ed2c8688de
     # via -r requirements/main.in
-aiohttp==3.7.4 \
-    --hash=sha256:5d84ecc73141d0a0d61ece0742bb7ff5751b0657dab8405f899d3ceb104cc7de \
-    --hash=sha256:cc31e906be1cc121ee201adbdf844522ea3349600dd0a40366611ca18cd40e81
+aiohttp==3.7.4.post0 \
+    --hash=sha256:17c073de315745a1510393a96e680d20af8e67e324f70b42accbd4cb3315c9fb \
+    --hash=sha256:493d3299ebe5f5a7c66b9819eacdcfbbaaf1a8e84911ddffcdc48888497afecf
     # via
     #   -r requirements/main.in
     #   safir
@@ -33,9 +33,9 @@ cffi==1.14.5 \
     --hash=sha256:6e4714cc64f474e4d6e37cfff31a814b509a35cb17de4fb1999907575684479c \
     --hash=sha256:fd78e5fee591709f32ef6edb9a015b4aa1a5022598e36227500c8f4e02328d9c
     # via pycares
-chardet==3.0.4 \
-    --hash=sha256:84ab92ed1c4d4f16916e05906b6b75a6c0fb5db821cc65e70cbd64a3e2a5eaae \
-    --hash=sha256:fc323ffcaeaed0e0a02bf4d117757b98aed530d9ed4531e3e15460124c106691
+chardet==4.0.0 \
+    --hash=sha256:0d6f53a15db4120f2b08c94f11e7d93d2c911ee118b6b30a04ec3ee8310179fa \
+    --hash=sha256:f864054d66fd9118f2e67044ac8981a54775ec5b67aed0441892edb553d21da5
     # via aiohttp
 click==7.1.2 \
     --hash=sha256:d2b5255c7c6349bc1bd1e59e08cd12acbbd63ce649f2588755783aa94dfb6b1a \
@@ -45,9 +45,9 @@ idna==3.1 \
     --hash=sha256:5205d03e7bcbb919cc9c19885f9920d622ca52448306f2377daede5cf3faac16 \
     --hash=sha256:c5b02147e01ea9920e6b0a3f1f7bb833612d507592c837a6c49552768f4054e1
     # via yarl
-importlib-metadata==3.7.0 \
-    --hash=sha256:24499ffde1b80be08284100393955842be4a59c7c16bbf2738aad0e464a8e0aa \
-    --hash=sha256:c6af5dbf1126cd959c4a8d8efd61d4d3c83bddb0459a17e554284a077574b614
+importlib-metadata==3.7.3 \
+    --hash=sha256:742add720a20d0467df2f444ae41704000f50e1234f46174b51f9c6031a1bd71 \
+    --hash=sha256:b74159469b464a99cb8cc3e21973e4d96e05d3024d337313fedb618a6e86e6f4
     # via -r requirements/main.in
 multidict==5.1.0 \
     --hash=sha256:25b4e5f22d3a37ddf3effc0710ba692cfc792c2b9edfb9c05aefe823256e84d5 \
@@ -80,7 +80,7 @@ yarl==1.6.3 \
     --hash=sha256:73494d5b71099ae8cb8754f1df131c11d433b387efab7b51849e7e1e851f07a4 \
     --hash=sha256:8a9066529240171b68893d60dca86a763eae2139dd42f42106b03cf4b426bf10
     # via aiohttp
-zipp==3.4.0 \
-    --hash=sha256:102c24ef8f171fd729d46599845e95c7ab894a4cf45f5de11a44cc7444fb1108 \
-    --hash=sha256:ed5eee1974372595f9e416cc7bbeeb12335201d8081ca8a0743c954d4446e5cb
+zipp==3.4.1 \
+    --hash=sha256:3607921face881ba3e026887d8150cca609d517579abe052ac81fc5aeffdbd76 \
+    --hash=sha256:51cb66cc54621609dd593d1787f286ee42a5c0adbb4b29abea5a63edc3e03098
     # via importlib-metadata

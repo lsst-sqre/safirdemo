@@ -37,17 +37,17 @@ chardet==4.0.0 \
     --hash=sha256:0d6f53a15db4120f2b08c94f11e7d93d2c911ee118b6b30a04ec3ee8310179fa \
     --hash=sha256:f864054d66fd9118f2e67044ac8981a54775ec5b67aed0441892edb553d21da5
     # via aiohttp
-click==8.0.0 \
-    --hash=sha256:7d8c289ee437bcb0316820ccee14aefcb056e58d31830ecab8e47eda6540e136 \
-    --hash=sha256:e90e62ced43dc8105fb9a26d62f0d9340b5c8db053a814e25d95c19873ae87db
+click==8.0.1 \
+    --hash=sha256:8c04c11192119b1ef78ea049e0a6f0463e4c48ef00a30160c704337586f3ad7a \
+    --hash=sha256:fba402a4a47334742d782209a7c79bc448911afe1149d07bdabdf480b3e2f4b6
     # via -r requirements/main.in
-idna==3.1 \
-    --hash=sha256:5205d03e7bcbb919cc9c19885f9920d622ca52448306f2377daede5cf3faac16 \
-    --hash=sha256:c5b02147e01ea9920e6b0a3f1f7bb833612d507592c837a6c49552768f4054e1
+idna==3.2 \
+    --hash=sha256:14475042e284991034cb48e06f6851428fb14c4dc953acd9be9a5e95c7b6dd7a \
+    --hash=sha256:467fbad99067910785144ce333826c71fb0e63a425657295239737f7ecd125f3
     # via yarl
-importlib-metadata==4.0.1 \
-    --hash=sha256:8c501196e49fb9df5df43833bdb1e4328f64847763ec8a50703148b73784d581 \
-    --hash=sha256:d7eb1dea6d6a6086f8be21784cc9e3bcfa55872b52309bc5fad53a8ea444465d
+importlib-metadata==4.5.0 \
+    --hash=sha256:833b26fb89d5de469b24a390e9df088d4e52e4ba33b01dc5e0e4f41b81a16c00 \
+    --hash=sha256:b142cc1dd1342f31ff04bb7d022492b09920cb64fed867cd3ea6f80fe3ebd139
     # via -r requirements/main.in
 multidict==5.1.0 \
     --hash=sha256:25b4e5f22d3a37ddf3effc0710ba692cfc792c2b9edfb9c05aefe823256e84d5 \

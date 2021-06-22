@@ -2,7 +2,15 @@
 safirdemo
 #########
 
-Demo of the Safir framework for Roundtable services
+This is a demo of the Safir_ framework for building FastAPI-based apps on Roundtable_.
 
-safirdemo is developed with the `Safir <https://safir.lsst.io>`__ framework.
-`Get started with development with the tutorial <https://safir.lsst.io/set-up-from-template.html>`__.
+See it in action:
+
+.. code-block:: bash
+
+   curl https://roundtable.lsst.codes/safirdemo/  | python -m json.tool
+
+Safirdemo's deployment is defined at https://github.com/lsst-sqre/roundtable/tree/master/deployments/safirdemo.
+
+.. _Safir: https://safir.lsst.io
+.. _Roundtable: https://roundtable.lsst.io

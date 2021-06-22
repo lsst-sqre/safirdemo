@@ -1,36 +1,36 @@
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: safirdemo
+  name: "safirdemo"
   labels:
-    app: safirdemo
+    app.kubernetes.io/name: "safirdemo"
 spec:
   replicas: 1
   selector:
     matchLabels:
-      name: safirdemo
+      app.kubernetes.io/name: "safirdemo"
   template:
     metadata:
       labels:
-        name: safirdemo
+        app.kubernetes.io/name: "safirdemo"
     spec:
       automountServiceAccountToken: false
       containers:
         - name: app
-          imagePullPolicy: "Always"
+          imagePullPolicy: "IfNotPresent"
+          # Use images field in a Kustomization to set/update image tag
           image: "lsstsqre/safirdemo"
           ports:
             - containerPort: 8080
-              name: app
+              name: "app"
           envFrom:
             - configMapRef:
-                name: safirdemo
+                name: "safirdemo"
           securityContext:
             allowPrivilegeEscalation: false
             capabilities:
               drop:
-                - all
+                - "all"
             readOnlyRootFilesystem: true
       securityContext:
         runAsNonRoot: true

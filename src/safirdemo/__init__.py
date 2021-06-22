@@ -1,19 +1,11 @@
-"""The safirdemo service.
-"""
+"""The safirdemo service."""
 
-__all__ = ["__version__", "metadata"]
+__all__ = ["__version__"]
 
-import sys
-
-if sys.version_info < (3, 8):
-    from importlib_metadata import PackageNotFoundError, version
-else:
-    from importlib.metadata import PackageNotFoundError, version
-
+from importlib.metadata import PackageNotFoundError, version
 
 __version__: str
-"""The application version string of (PEP 440 / SemVer compatible).
-"""
+"""The application version string (PEP 440 / SemVer compatible)."""
 
 try:
     __version__ = version(__name__)

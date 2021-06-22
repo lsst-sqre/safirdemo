@@ -1,3 +1,9 @@
+# Some additional things to ignore beyond what .gitignore already handles.
+# We cannot exclude the .git directory because setuptools_scm requires it.
+tests/
+
+# Everything below this point is a copy of .gitignore.
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

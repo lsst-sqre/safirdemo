@@ -3,7 +3,7 @@ kind: Kustomization
 
 images:
   - name: "lsstsqre/safirdemo"
-    newTag: 0.0.0
+    newTag: 1.0.0
 
 resources:
   - configmap.yaml

@@ -11,4 +11,4 @@ spec:
       port: 8080
       targetPort: "app"
   selector:
-    name: "safirdemo"
+    app.kubernetes.io/name: "safirdemo"

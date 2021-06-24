@@ -9,6 +9,7 @@ init:
 	pip install --editable .
 	pip install --upgrade -r requirements/main.txt -r requirements/dev.txt
 	rm -rf .tox
+	pip install --upgrade tox
 	pre-commit install
 
 .PHONY: update
@@ -16,4 +17,4 @@ update: update-deps init
 
 .PHONY: run
 run:
-	adev runserver --app-factory create_app src/safirdemo/app.py
+	tox -e run

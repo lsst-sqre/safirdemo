@@ -5,19 +5,11 @@
 # After editing, update requirements/main.txt by running:
 #     make update-deps
 
---index-url https://pypi.python.org/simple/
+# These dependencies are for fastapi including some optional features.
+fastapi
+gunicorn
+starlette
+uvicorn[standard]
 
+# Other dependencies.
 safir
-aiohttp
-aiodns
-cchardet
-importlib_metadata
-click
-
-# yarl requires typing-extensions for Python versions older than 3.8, but
-# if dependencies are regenerated on Python 3.8, this dependency won't be
-# pinned, causing the Docker build to fail.  While we still support 3.7,
-# work around this bug by adding an unnecessary dependency on
-# typing-extensions to ensure that it is hash-pinned.  When Python 3.7
-# support is dropped, this hack can be removed.
-typing-extensions

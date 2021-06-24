@@ -2,7 +2,7 @@
 safirdemo
 #########
 
-This is a demo of the Safir_ framework for building aiohttp-based apps on Roundtable_.
+This is a demo of the Safir_ framework for building FastAPI-based apps on Roundtable_.
 
 See it in action:
 

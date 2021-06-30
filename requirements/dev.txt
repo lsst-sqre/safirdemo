@@ -304,7 +304,7 @@ typing-extensions==3.10.0.0 \
     # via
     #   -c requirements/main.txt
     #   mypy
-uvicorn[standard]==0.14.0 \
+uvicorn==0.14.0 \
     --hash=sha256:2a76bb359171a504b3d1c853409af3adbfa5cef374a4a59e5881945a97a93eae \
     --hash=sha256:45ad7dfaaa7d55cab4cd1e85e03f27e9d60bc067ddc59db52a2b0aeca8870292
     # via

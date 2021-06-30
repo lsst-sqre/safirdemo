@@ -45,7 +45,6 @@ ENV PATH="/opt/venv/bin:$PATH"
 
 COPY . /workdir
 WORKDIR /workdir
-RUN git status
 RUN pip install --no-cache-dir .
 
 FROM base-image AS runtime-image

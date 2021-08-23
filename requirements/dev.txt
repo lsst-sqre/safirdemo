@@ -38,6 +38,12 @@ cfgv==3.3.0 \
     --hash=sha256:9e600479b3b99e8af981ecdfc80a0296104ee610cab48a5ae4ffd0b668650eb1 \
     --hash=sha256:b449c9c6118fe8cca7fa5e00b9ec60ba08145d281d52164230a69211c5d597a1
     # via pre-commit
+charset-normalizer==2.0.4 \
+    --hash=sha256:0c8911edd15d19223366a194a513099a302055a962bca2cec0f54b8b63175d8b \
+    --hash=sha256:f23667ebe1084be45f6ae0538e4a5a865206544097e4e8bbcacf42cd02a348f3
+    # via
+    #   -c requirements/main.txt
+    #   httpx
 click==8.0.1 \
     --hash=sha256:8c04c11192119b1ef78ea049e0a6f0463e4c48ef00a30160c704337586f3ad7a \
     --hash=sha256:fba402a4a47334742d782209a7c79bc448911afe1149d07bdabdf480b3e2f4b6
@@ -140,9 +146,9 @@ httptools==0.2.0 \
     # via
     #   -c requirements/main.txt
     #   uvicorn
-httpx==0.18.2 \
-    --hash=sha256:979afafecb7d22a1d10340bafb403cf2cb75aff214426ff206521fc79d26408c \
-    --hash=sha256:9f99c15d33642d38bce8405df088c1c4cfd940284b4290cacbfb02e64f4877c6
+httpx==0.19.0 \
+    --hash=sha256:92ecd2c00c688b529eda11cedb15161eaf02dee9116712f621c70d9a40b2cdd0 \
+    --hash=sha256:9bd728a6c5ec0a9e243932a9983d57d3cc4a87bb4f554e1360fce407f78f9435
     # via
     #   -c requirements/main.txt
     #   -r requirements/dev.in
@@ -308,7 +314,7 @@ typing-extensions==3.10.0.0 \
     # via
     #   -c requirements/main.txt
     #   mypy
-uvicorn==0.15.0 \
+uvicorn[standard]==0.15.0 \
     --hash=sha256:17f898c64c71a2640514d4089da2689e5db1ce5d4086c2d53699bf99513421c1 \
     --hash=sha256:d9a3c0dd1ca86728d3e235182683b4cf94cd53a867c288eaeca80ee781b2caff
     # via

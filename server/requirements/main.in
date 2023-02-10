@@ -6,8 +6,8 @@
 #     make update-deps
 
 # These dependencies are for fastapi including some optional features.
-fastapi
-starlette
+fastapi<0.91.0
+starlette<0.24.0
 uvicorn[standard]
 
 # Other dependencies.

@@ -21,7 +21,7 @@ classifiers = [
     "Typing :: Typed",
 ]
 requires-python = ">=3.8"
-dependencies = []
+dependencies = ["pydantic", "safir"]
 dynamic = ["version"]
 
 [project.optional-dependencies]

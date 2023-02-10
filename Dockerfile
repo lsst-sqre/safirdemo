@@ -45,6 +45,7 @@ ENV PATH="/opt/venv/bin:$PATH"
 
 COPY . /workdir
 WORKDIR /workdir
+RUN pip install --no-cache-dir ./client
 RUN pip install --no-cache-dir ./server
 
 FROM base-image AS runtime-image

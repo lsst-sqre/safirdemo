@@ -13,6 +13,7 @@ update-deps-no-hashes:
 
 .PHONY: init
 init:
+	pip install --editable "./client[dev]"
 	pip install --editable ./server
 	pip install --upgrade -r server/requirements/main.txt -r server/requirements/dev.txt
 	rm -rf ./server.tox

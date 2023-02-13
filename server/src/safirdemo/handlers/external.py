@@ -5,8 +5,9 @@ from safir.dependencies.logger import logger_dependency
 from safir.metadata import get_metadata
 from structlog.stdlib import BoundLogger
 
+from rubinobs.square.clients.safirdemo.models import Index
+
 from ..config import config
-from ..models import Index
 
 __all__ = ["get_index", "external_router"]
 

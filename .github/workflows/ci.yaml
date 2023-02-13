@@ -26,10 +26,44 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.10"
+          python-version: "3.11"
 
       - name: Run pre-commit
         uses: pre-commit/action@v3.0.0
+
+  test-client:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        python:
+          - "3.10"
+          - "3.11"
+
+    steps:
+      - uses: actions/checkout@v3
+
+      # NOTE: run-tox would need to take a working-directory option to work here
+      # - name: Run tox
+      #   uses: lsst-sqre/run-tox@v1
+      #   with:
+      #     python-version: ${{ matrix.python }}
+      #     tox-envs: "py,coverage-report,typing"
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python }}
+
+      - name: Python install
+        shell: bash
+        run: |
+          python -m pip install --upgrade pip setuptools tox
+
+      - name: Run tox for server
+        working-directory: ./client
+        run: |
+          tox run -e typing
 
   test:
 
@@ -38,22 +72,39 @@ jobs:
     strategy:
       matrix:
         python:
-          - "3.9"
-          - "3.10"
+          - "3.11"
 
     steps:
       - uses: actions/checkout@v3
 
-      - name: Run tox
-        uses: lsst-sqre/run-tox@v1
+      # NOTE: run-tox would need to take a working-directory option to work here
+      # - name: Run tox
+      #   uses: lsst-sqre/run-tox@v1
+      #   with:
+      #     python-version: ${{ matrix.python }}
+      #     tox-envs: "py,coverage-report,typing"
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python }}
-          tox-envs: "py,coverage-report,typing"
+
+      - name: Python install
+        shell: bash
+        run: |
+          python -m pip install --upgrade pip setuptools tox
+
+      - name: Run tox for server
+        # working-directory: ./server
+        run: |
+          cd server
+          pip freeze
+          tox run -e py,coverage-report,typing
 
   build:
 
     runs-on: ubuntu-latest
-    needs: [lint, test]
+    needs: [lint, test, test-client]
 
     # Only do Docker builds of tagged releases and pull requests from ticket
     # branches.  This will still trigger on pull requests from untrusted
